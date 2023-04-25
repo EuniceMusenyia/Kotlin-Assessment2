@@ -14,7 +14,7 @@ randomStrings("Kotlin")
     var account2 = SavingsAccount(4130598, "Lucas Mark", 9000.00)
     println(account2.deposit(2000.00))
     println(account2.details())
-//    println(account2.withdraw(5))
+    println(account2.withdraw(5))
 }
 //args: Array<String>//
 //1. Write and invoke one function that takes in a random string and returns the
