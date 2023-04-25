@@ -11,7 +11,6 @@ randomStrings("Kotlin")
     println(account1.deposit(4000.00))
     println(account1.withdraw(2000.00))
     account1.details()
-//    (account1.details("Account number ${accountNumber} with balance ${balance} is operated by ${accountName}"))
     var account2 = SavingsAccount(4130598, "Lucas Mark", 9000.00)
     println(account2.deposit(2000.00))
     println(account2.details())
@@ -37,7 +36,7 @@ fun randomStrings(name: String):String{
 //4. Must contain a digit
 //Your function should determine whether the password provided is valid or not.
 //The function returns true/false (7pts)
-fun passwords (password:String){
+fun passwords (password:String): Boolean{
     if (password.length>=8 && password.length<=16 && password!="password"){
         println(true)
     }
@@ -95,15 +94,15 @@ open class  CurrentAccount (var accountNumber: Int,var accountName: String, var 
 //successful withdrawal (6pts)
 class SavingsAccount (accountNumber: Int,accountName: String, balance: Double): CurrentAccount(accountNumber, accountName,balance){
 
-//    override fun withdraw(withdrawals: Int) {
-//        if ( withdrawals<4){
-//            println("Withdrawal allowed")
-//        }
-//        else{
-//            println("Withdrawal denied")
-//        }
-//
-//    }
+    override fun withdraw(withdrawals: Int) {
+        if ( withdrawals<4){
+            println("Withdrawal allowed")
+        }
+        else{
+            println("Withdrawal denied")
+        }
+
+    }
 
 
 }
